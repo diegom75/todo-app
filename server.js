@@ -11,6 +11,7 @@ const port = 3000;
 
 // Middleware
 app.use(express.json());
+app.use(express.static('client'));
 
 // MongoDB Connection
 mongoose.connect(process.env.MONGODB_URI)

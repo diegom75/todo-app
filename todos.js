@@ -32,14 +32,9 @@ router.post('/todos', async (req, res) => {
     }
 });
 
-// FIND todo
-
-/*
-router.post('/todos', async (req, res) => {
+// FETCH todo
 
 
-    
-});
-*/
+
 
 export { router as todoRouter };

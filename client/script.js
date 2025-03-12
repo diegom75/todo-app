@@ -1,15 +1,24 @@
-app.use(express.static('client'));
-
 // Get DOM HTML Elements
 
 // Fetch all todos when page loads
 async function fetchTodos() {
-// add your code
+const url = "/api/todos";
+  try {
+    const response = await fetch(url);
+    if (!response.ok) {
+      throw new Error(`Response status: ${response.status}`);
+    }
+
+    const json = await response.json();
+    console.log(json);
+  } catch (error) {
+    console.error(error.message);
+  }
 }
 
 // Display todos in the list
 function displayTodos(todos) {
-// add your code
+    toDoListDisplay = document.getElementsById(toDoList);
 }
 
 // Handle form submission
